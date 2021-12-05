@@ -2486,8 +2486,12 @@
   <script>
     $(".cnt-home").click(function(){
     alert("还没有登录");
-    window.location.href="login.html";
+    window.location.href="login";
   });
+    $.ajax({
+        url:"index"
+    })
+
 </script>
 
 </body>

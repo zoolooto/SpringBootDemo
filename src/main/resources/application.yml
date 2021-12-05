@@ -2,7 +2,7 @@ server:
   port: 8080
   servlet:
     content-type: text/html
-    context-path: /assets
+    context-path:
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
@@ -11,13 +11,14 @@ spring:
     password: root
   thymeleaf:
     cache: false
-    mode: LEGACYHTML5
-    prefix: classpath:/webapp
-    suffix: .html
+#    mode: HTML5
+#    prefix: classpath:/templates/
+#    suffix: .html
+#    encoding: UTF-8
     mvc:
       static-path-pattern: /static/**
 mybatis:
   mapper-locations: classpath:Mapper/*.xml
-  type-aliases-package: com.project.entity
+  type-aliases-package: com.example.springbootdemo.entity
 configuration:
   map-underscore-to-camel-case: true

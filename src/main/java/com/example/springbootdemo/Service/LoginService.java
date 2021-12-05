@@ -1,11 +1,12 @@
-package com.project.Service;
+package com.example.springbootdemo.Service;
 
 
-import com.project.Dao.UserMapper;
-import com.project.entity.User;
-import com.project.utils.JwtUtils;
+import com.example.springbootdemo.Dao.UserMapper;
+import com.example.springbootdemo.entity.User;
+import com.example.springbootdemo.utils.JwtUtils;
 import org.springframework.beans.factory.annotation.Autowired;
-
+import org.springframework.stereotype.Service;
+@Service
 public class LoginService {
     @Autowired
     private UserMapper userMapper;

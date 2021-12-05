@@ -1,4 +1,4 @@
-package com.project.utils;
+package com.example.springbootdemo.utils;
 
 import com.auth0.jwt.JWT;
 import com.auth0.jwt.JWTVerifier;

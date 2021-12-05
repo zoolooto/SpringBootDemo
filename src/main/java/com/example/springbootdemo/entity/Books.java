@@ -1,4 +1,4 @@
-package com.project.entity;
+package com.example.springbootdemo.entity;
 
 import java.io.Serializable;
 
@@ -257,5 +257,17 @@ public class Books implements Serializable {
         sb.append(", serialVersionUID=").append(serialVersionUID);
         sb.append("]");
         return sb.toString();
+    }
+
+    public Books(Integer id, String bookname, String author, String press, String price, String introduce, String picture) {
+        this.id = id;
+        this.bookname = bookname;
+        this.author = author;
+        this.press = press;
+        this.price = price;
+        this.introduce = introduce;
+        this.picture = picture;
+    }
+    public Books() {
     }
 }

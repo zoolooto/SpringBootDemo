@@ -1,4 +1,4 @@
-package com.project.utils;
+package com.example.springbootdemo.utils;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
