@@ -19,7 +19,7 @@ public class JwtUtils {
      * 载荷内容：暂时设计为：这个人的名字，这个人的昵称
      * 加密密钥：这个人的id加上一串字符串
      */
-    public static String createToken(Integer userId, String name, String username) {
+    public static String createToken(Integer userId, String name) {
 
         Calendar nowTime = Calendar.getInstance();
         nowTime.add(Calendar.MINUTE, 30);
@@ -28,9 +28,8 @@ public class JwtUtils {
         return JWT.create().withAudience(userId.toString())   //签发对象
                 .withIssuedAt(new Date())    //发行时间
                 .withExpiresAt(expiresDate)  //有效时间
-                .withClaim("username", username)    //载荷，随便写几个都可以
-                .withClaim("name", name)
-                .sign(Algorithm.HMAC256(userId + "HelloLehr"));   //加密
+                .withClaim("name", name)  // 载荷，随便写几个都可以
+                .sign(Algorithm.HMAC256(userId + "Hello"));   //加密
     }
 
     /**
@@ -42,7 +41,7 @@ public class JwtUtils {
     public static void verifyToken(String token, String secret) throws Exception {
         DecodedJWT jwt = null;
         try {
-            JWTVerifier verifier = JWT.require(Algorithm.HMAC256(secret + "HelloLehr")).build();
+            JWTVerifier verifier = JWT.require(Algorithm.HMAC256(secret + "Hello")).build();
             jwt = verifier.verify(token);
         } catch (Exception e) {
             //效验失败

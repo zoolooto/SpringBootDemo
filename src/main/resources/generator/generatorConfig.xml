@@ -9,7 +9,7 @@
                     MyBatis3Simple: 生成基本的CRUD（清新简洁版）
                     MyBatis3: 生成带条件的CRUD（奢华尊享版）
      -->
-    <classPathEntry location="D:/Program Files (x86)/Java/maven-repository/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar" />
+    <classPathEntry location="F:/Java data/JavaAdvanced/Maven/mysql/mysql-connector-java/8.0.16/mysql-connector-java-8.0.16.jar" />
     <context id="DB2Tables" targetRuntime="MyBatis3Simple">
         <!-- JavaBean 实现 序列化 接口 -->
         <plugin type="org.mybatis.generator.plugins.SerializablePlugin" />
@@ -50,16 +50,17 @@
             <property name="enableSubPackages" value="true"/>
         </sqlMapGenerator>
         <!-- 生成DAO的包名和位置-->
-        <javaClientGenerator type="XMLMAPPER" targetPackage="com.project.Dao" targetProject="src/main/java">
+        <javaClientGenerator type="XMLMAPPER" targetPackage="com.example.springbootdemo.Dao" targetProject="src/main/java">
             <property name="enableSubPackages" value="true"/>
         </javaClientGenerator>
         <!-- 要生成的表 tableName是数据库中的表名或视图名 domainObjectName是实体类名-->
         <!-- <table tableName="risk_model_order" domainObjectName="DSRiskModelOrder" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>
 
          <table tableName="tel_bill_record" domainObjectName="DSTelBillRecord" enableCountByExample="false" enableUpdateByExample="false" enableDeleteByExample="false" enableSelectByExample="false" selectByExampleQueryId="false"></table>-->
-        <table tableName="books"></table>
-        <table tableName="bookstock"></table>
+<!--        <table tableName="books"></table>-->
+<!--        <table tableName="bookstock"></table>-->
+
+<!--        <table tableName="viptable"></table>-->
         <table tableName="user"></table>
-        <table tableName="viptable"></table>
     </context>
 </generatorConfiguration>

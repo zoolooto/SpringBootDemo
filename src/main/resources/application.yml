@@ -3,10 +3,13 @@ server:
   servlet:
     content-type: text/html
     context-path:
+    multipart:
+        max-file-size: 300MB
+        max-request-size: 300MB
 spring:
   datasource:
     driver-class-name: com.mysql.cj.jdbc.Driver
-    url: jdbc:mysql//localhost:3306/ssmbook?useUnicode=true&characterEncoding=utf8&zeroDateTimeBehavior=convertToNull&useSSL=true&serverTimezone=GMT%2B8
+    url: jdbc:mysql://localhost:3306/ssmbook?useUnicode=true&characterEncoding=utf-8
     username: root
     password: root
   thymeleaf:
@@ -22,3 +25,9 @@ mybatis:
   type-aliases-package: com.example.springbootdemo.entity
 configuration:
   map-underscore-to-camel-case: true
+logging:
+  config: classpath:logback.xml
+  level:
+    com:
+      springboot: debug
+fileLocation: static/files

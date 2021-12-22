@@ -1,6 +1,22 @@
-<html lang="ch" xmlns:th="http://www.thymeleaf.org">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title th:text="demo">默认的标题</title>
-   <link th:href="@{css/}" rel="stylesheet">
+    <meta charset="UTF-8">
+    <title>Title</title>
 </head>
+<body>
+<script src="../js/jquery.js" type="text/javascript">
+
+        $.ajax({
+            url: "http://localhost:8080/login/logcheck",
+            type: 'post',
+            data: {'code': $("#node").val()},
+            success: function (res) {
+                // $("#mes").children.text(res);
+                console.log(res);
+            }
+        })
+
+</script>
+</body>
 </html>
