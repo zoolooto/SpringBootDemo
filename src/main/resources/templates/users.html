@@ -63,10 +63,10 @@
             <div class="well sidebar-nav">
                 <ul class="nav nav-list">
                     <li class="nav-header"><i class="icon-wrench"></i> 管理</li>
-                    <li><a href="users">用户</a></li>
+                    <li class="active"><a href="users">用户</a></li>
                     <li><a href="books">书籍</a></li>
                     <li class="nav-header"><i class="icon-signal"></i> 统计</li>
-                    <li class="active"><a href="ConservatorIndex">访问者</a></li>
+                    <li ><a href="ConservatorIndex">访问者</a></li>
                     <li class="nav-header"><i class="icon-user"></i> 资料</li>
                     <li><a th:href="|profile?id=${session.user.id}|">我的资料</a></li>
                     <li><a href="#">退出</a></li>
@@ -97,6 +97,7 @@
                         <td>
                             <div style="width:75px;height: 75px;"><img th:src="${user.head}" style="width: 100%;
 									height: 100%;" class=""></div>
+                            <a th:href="@{'download?fileName='+${user.head}}" class="btn btn-success">下载图片</a>
                         </td>
                         <td th:text="${user.name}">jonidsoto@provider.com</td>
                         <td th:text="${user.password}">215-xxx-xxxx</td>

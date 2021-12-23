@@ -23,7 +23,7 @@ public class LoginServiceImpl implements LoginService {
                 // 生成token
                 token = JwtUtils.createToken(loginUser.getId(), loginUser.getName());
                 Cookie cookie = new Cookie("token", token);
-                cookie.setMaxAge(60*10);
+                cookie.setMaxAge(60*10*10);
                 response.addCookie(cookie);
                 return loginUser;
         } else {

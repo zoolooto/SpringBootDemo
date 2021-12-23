@@ -244,6 +244,7 @@ public class User implements Serializable {
         this.grade = grade;
     }
 
+
     public User() {
     }
 
