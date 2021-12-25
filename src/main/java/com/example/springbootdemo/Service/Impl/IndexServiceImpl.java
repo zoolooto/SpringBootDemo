@@ -16,6 +16,7 @@ public class IndexServiceImpl implements IndexService {
     UserMapper userMapper;
     @Autowired
     BooksMapper booksMapper;
+
     @Override
     public User selectById(int id) {
         return userMapper.selectByPrimaryKey(id);
@@ -23,11 +24,20 @@ public class IndexServiceImpl implements IndexService {
 
     @Override
     public List<User> selectAll() {
-       return userMapper.selectAll();
+        return userMapper.selectAll();
     }
 
     @Override
     public List<Books> selectAllBooks() {
-     return booksMapper.selectAll();
+        return booksMapper.selectAll();
+    }
+
+    @Override
+    public List<Books> selectlBooks() {
+        List<Books> books = booksMapper.selectAll();
+        if (books.size() > 7) {
+            books = books.subList(0, 6);
+        }
+        return books;
     }
 }

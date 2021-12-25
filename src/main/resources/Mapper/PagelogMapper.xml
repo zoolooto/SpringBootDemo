@@ -1,20 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.springbootdemo.Dao.PagelogMapper">
-<!--    int insertlog(Pagelog pagelog);-->
+    <resultMap id="pagelogResultMap" type="com.example.springbootdemo.entity.Pagelog">
+        <id column="ID" jdbcType="INTEGER" property="id"/>
+        <result column="name" jdbcType="VARCHAR" property="name"/>
+        <result column="loginNumber" jdbcType="INTEGER" property="loginNumber"/>
+        <result column="consumption" jdbcType="VARCHAR" property="consumption"/>
+    </resultMap>
+    <!--    int insertlog(Pagelog pagelog);-->
     <insert id="insertlog">
-        insert into pagelog values(#{id},#{name},#{loginNumber},#{consumption})
+        insert into pagelog
+        values (#{id}, #{name}, #{loginNumber}, #{consumption})
     </insert>
-<!--    List<Pagelog> selectAll();-->
-    <select id="selectAll" resultType="com.example.springbootdemo.entity.Pagelog">
-        select * from pagelog
+<!--    boolean update(String name);-->
+    <update id="update">
+        update pagelog
+        set loginNumber=loginNumber+1
+        where name=#{name,jdbcType=VARCHAR}
+    </update>
+    <!--    List<Pagelog> selectAll();-->
+    <select id="selectAll" resultMap="pagelogResultMap">
+        select ID,name,loginNumber,consumption from pagelog
     </select>
-<!--    int loginnumber();-->
+    <!--    int loginnumber();-->
     <select id="loginnumber" resultType="java.lang.Integer">
-        SELECT sum(loginNumber) FROM pagelog
+        SELECT sum(loginNumber)
+        FROM pagelog
     </select>
-<!--    int profitToday();-->
+    <!--    int profitToday();-->
     <select id="profitToday" resultType="java.lang.Integer">
-        SELECT sum(consumption) FROM pagelog
+        SELECT sum(consumption)
+        FROM pagelog
+    </select>
+    <!--    Pagelog selectByName(String name);-->
+    <select id="selectByName" resultType="com.example.springbootdemo.entity.Pagelog">
+        select ID,name,loginNumber,consumption from pagelog where name=#{name}
     </select>
 </mapper>

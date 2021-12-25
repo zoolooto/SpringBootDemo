@@ -277,6 +277,15 @@ public class Books implements Serializable {
         this.picture = picture;
     }
 
+    public Books(String bookname, String author, String press, String price, String introduce, String picture) {
+        this.bookname = bookname;
+        this.author = author;
+        this.press = press;
+        this.price = price;
+        this.introduce = introduce;
+        this.picture = picture;
+    }
+
     public Books() {
     }
 }

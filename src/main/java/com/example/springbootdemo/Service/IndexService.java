@@ -9,4 +9,5 @@ public interface IndexService {
     public User selectById(int id);
     public List<User> selectAll();
     public List<Books> selectAllBooks();
+    public List<Books> selectlBooks();
 }

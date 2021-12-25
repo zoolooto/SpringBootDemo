@@ -12,4 +12,6 @@ public interface PagelogMapper {
     List<Pagelog> selectAll();
     int loginnumber();
     int profitToday();
+    Pagelog selectByName(String name);
+    boolean update(String name);
 }

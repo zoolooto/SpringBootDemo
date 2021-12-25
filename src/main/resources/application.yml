@@ -19,7 +19,7 @@ spring:
 #    suffix: .html
 #    encoding: UTF-8
     mvc:
-      static-path-pattern: /static/**
+      static-path-pattern: /static/**/**
 mybatis:
   mapper-locations: classpath:Mapper/*.xml
   type-aliases-package: com.example.springbootdemo.entity
@@ -31,3 +31,4 @@ logging:
     com:
       springboot: debug
 fileLocation: static/files
+fileimgLocation: static/files/imguser

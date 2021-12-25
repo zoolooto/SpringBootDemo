@@ -29,6 +29,12 @@ public class Pagelog implements Serializable {
 		this.consumption = consumption;
 	}
 
+	public Pagelog(String name, Integer loginNumber, String consumption) {
+		this.name = name;
+		this.loginNumber = loginNumber;
+		this.consumption = consumption;
+	}
+
 	@Override
 	public String toString() {
 		return "Pagelog{" +

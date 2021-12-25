@@ -45,6 +45,7 @@ public class LoginController {
             User user1 = loginservice.login(user,response);
             if (user1 != null) {
                 request.getSession().setAttribute("user", user1);
+                
                 // model.addAttribute("user",user1);
                 // model.addAttribute("data", pageLogServiceImpl.selcertPage());
                 if (user1.getGrade() >= 1)

@@ -41,7 +41,7 @@ public class UserController {
         return "adduser";
     }
 
-    @Value("${fileLocation}")
+    @Value("${fileimgLocation}")
     String fileLocation;
 
     @RequestMapping(value = "/adduser", method = RequestMethod.POST)
@@ -70,7 +70,7 @@ public class UserController {
         // // 上传
         // String fileName = date.getTime() +"@" + file.getOriginalFilename();
         // file.transferTo(new File(newFile, fileName));
-        User user = new User(name, password, PaymentPassword, "files/" + filename, Balance, grade);
+        User user = new User(name, password, PaymentPassword, "files/"+"imguser/" + filename, Balance, grade);
         userService.addUser(user);
         return "redirect:/users";
     }
@@ -78,7 +78,7 @@ public class UserController {
     @RequestMapping("download")
     public void download(String fileName, HttpServletResponse response) throws IOException {
         String realPath = "src/main/resources/" + fileLocation;
-        fileName = fileName.substring(fileName.indexOf("/") + 1, fileName.length());
+        fileName = fileName.substring(fileName.lastIndexOf("/")+1, fileName.length());
         FileInputStream inputStream = new FileInputStream(new File(realPath, fileName));
         response.setHeader("content-disposition", "attachment; fileName=" + fileName);
         ServletOutputStream outputStream = response.getOutputStream();
@@ -118,7 +118,7 @@ public class UserController {
         // String fileName = date.getTime() +"@" + file.getOriginalFilename();
         // file.transferTo(new File(newFile, fileName));
         int uid=((User)session.getAttribute("user")).getId();
-        User user = new User(name, password, payword, "files/" + filename, balance, grade);
+        User user = new User(name, password, payword, "files/"+"imguser/" + filename, balance, grade);
         user.setId(uid);
         userService.updateUser(user);
         return "redirect:/users";

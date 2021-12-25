@@ -1,0 +1,283 @@
+<html lang="ch">
+<head>
+    <!-- Meta -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <meta name="keywords" content="MediaCenter, Template, eCommerce">
+    <meta name="robots" content="all">
+    <title>Flipmart premium HTML5 & CSS3 Template</title>
+
+    <!-- Bootstrap Core CSS -->
+    <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap.css">
+    <!-- Customizable CSS -->
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/blue.css">
+
+    <!-- Icons/Glyphs -->
+    <link rel="stylesheet" href="../css/font-awesome.css">
+    <!-- Fonts -->
+    <style>
+        thead tr th {
+            text-align: center;
+            font-size: 16px;
+        }
+
+        tbody tr th {
+            text-align: center;
+        }
+    </style>
+</head>
+<body class="cnt-home">
+<!-- ============================================== HEADER ============================================== -->
+<header class="header-style-1">
+
+    <!-- ============================================== TOP MENU ============================================== -->
+    <div class="top-bar animate-dropdown">
+        <div class="container">
+            <div class="header-top-inner">
+                <div class="cnt-account">
+                    <ul class="list-unstyled">
+                        <li><a href="#"><i class="icon fa fa-user"></i>我的账号</a></li>
+                        <li><a href="my-wishlist.html"><i class="icon fa fa-heart"></i>愿望清单</a></li>
+                        <li><a href="shopping-cart.html"><i class="icon fa fa-shopping-cart"></i>购物车</a></li>
+                        <li><a href="login.html"><i class="icon fa fa-lock"></i>登录</a></li>
+                    </ul>
+                </div>
+                <!-- /.cnt-account -->
+
+
+                <!-- /.cnt-cart -->
+                <div class="clearfix"></div>
+            </div>
+            <!-- /.header-top-inner -->
+        </div>
+        <!-- /.container -->
+    </div>
+    <!-- /.header-top -->
+    <!-- ============================================== TOP MENU : END ============================================== -->
+    <div class="main-header">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-4 logo-holder">
+                    <!-- ============================================================= LOGO ============================================================= -->
+                    <div class="logo"><a href="index.html"> <img src="../images/logo.png" alt="logo"> </a>
+                    </div>
+                    <!-- /.logo -->
+                    <!-- ============================================================= LOGO : END ============================================================= -->
+                </div>
+                <!-- /.logo-holder -->
+
+                <div class="col-xs-12 col-sm-12 col-md-8 top-search-holder">
+                    <!-- /.contact-row -->
+                    <!-- ============================================================= SEARCH AREA ============================================================= -->
+                    <div class="search-area">
+                        <form>
+                            <div class="control-group">
+
+                                <input class="search-field" placeholder="输入书籍信息"/>
+                                <!-- //ajax入口 -->
+                                <a class="search-button" href="#"></a></div>
+
+                        </form>
+                    </div>
+                    <!-- /.search-area -->
+                    <!-- ============================================================= SEARCH AREA : END ============================================================= -->
+                </div>
+                <!-- /.top-search-holder -->
+
+                <div class="col-xs-12 col-sm-12 col-md-2 animate-dropdown top-cart-row">
+                    <!-- ============================================================= SHOPPING CART DROPDOWN ============================================================= -->
+
+
+                    <!-- /.dropdown-cart -->
+
+                    <!-- ============================================================= SHOPPING CART DROPDOWN : END============================================================= -->
+                </div>
+                <!-- /.top-cart-row -->
+            </div>
+            <!-- /.row -->
+
+        </div>
+        <!-- /.container -->
+
+    </div>
+    <!-- /.main-header -->
+
+    <!-- ============================================== NAVBAR ============================================== -->
+    <div class="header-nav animate-dropdown">
+        <div class="container">
+            <div class="yamm navbar navbar-default" role="navigation">
+                <div class="navbar-header">
+                    <button data-target="#mc-horizontal-menu-collapse" data-toggle="collapse"
+                            class="navbar-toggle collapsed" type="button">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span
+                            class="icon-bar"></span> <span class="icon-bar"></span></button>
+                </div>
+                <div class="nav-bg-class">
+                    <div class="navbar-collapse collapse" id="mc-horizontal-menu-collapse">
+                        <div class="nav-outer">
+                            <ul class="nav navbar-nav">
+                                <li class="active dropdown yamm-fw"><a href="index"
+                                                                       class="dropdown-toggle">主页</a></li>
+                                <li class="dropdown yamm mega-menu"><a href="Listbooks"
+                                                                       class="dropdown-toggle">书籍列表 </a>
+                                </li>
+                            </ul>
+                            <!-- /.navbar-nav -->
+                            <div class="clearfix"></div>
+                        </div>
+                        <!-- /.nav-outer -->
+                    </div>
+                    <!-- /.navbar-collapse -->
+
+                </div>
+                <!-- /.nav-bg-class -->
+            </div>
+            <!-- /.navbar-default -->
+        </div>
+        <!-- /.container-class -->
+
+    </div>
+    <!-- /.header-nav -->
+    <!-- ============================================== NAVBAR : END ============================================== -->
+
+</header>
+
+<!-- ============================================== HEADER : END ============================================== -->
+<div class="breadcrumb">
+    <div class="container">
+        <div class="breadcrumb-inner">
+            <ul class="list-inline list-unstyled">
+                <li><a href="index">home</a></li>
+                <li class='active'>书籍列表</li>
+            </ul>
+        </div><!-- /.breadcrumb-inner -->
+    </div><!-- /.container -->
+</div><!-- /.breadcrumb -->
+
+<div class="body-content outer-top-xs">
+    <div class="container">
+        <div class="product-comparison">
+            <div>
+                <!-- 这里可以用来前台进行模糊搜索 若模糊搜索结果为空则返回404界面 -->
+                <h1 class="page-title  heading-title">所有书籍列表</h1>
+                <div class="table-responsive">
+                    <table
+                            class="table table-hover table-bordered ">
+                        <thead>
+                        <tr>
+                            <th class="col-2">书籍名</th>
+                            <th class="col-1">作者</th>
+                            <th class="col-1">出版社</th>
+                            <th class="col-1">书籍价格</th>
+                            <th class="col-1">书籍简介</th>
+                            <th class="col-lg-2">书籍图片</th>
+                            <th class="col-lg-1">操作</th>
+                        </tr>
+                        </thead>
+                        <tbody class="demo">
+                        <tr>
+                            <th>nn</th>
+                            <th>mm</th>
+                            <th>ff</th>
+                            <th>nn</th>
+                            <th>ff</th>
+
+                            <th>
+                                <div class="product">
+                                    <div class="product-image">
+                                        <div class="image">
+                                            <a href="detail.html">
+                                                <img alt="" src="assets/images/products/p1.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="product-info text-left">
+                                    <div class="action">
+                                        <a class="lnk btn btn-primary" href="#">添加进购物车</a>
+                                    </div>
+
+                                </div>
+                            </th>
+                        </tr>
+                        <tr>
+                            <th>nn</th>
+                            <th>mm</th>
+                            <th>ff</th>
+                            <th>nn</th>
+                            <th>ff</th>
+
+                            <th>
+                                <div class="product">
+                                    <div class="product-image">
+                                        <div class="image">
+                                            <a href="detail.html">
+                                                <img alt="" src="assets/images/products/p1.jpg">
+                                            </a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </th>
+                            <th>
+                                <div class="product-info text-left">
+                                    <div class="action">
+                                        <a class="lnk btn btn-primary" href="#">添加进购物车</a>
+                                    </div>
+
+                                </div>
+                            </th>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- /#top-banner-and-menu -->
+
+<!-- ============================================================= FOOTER ============================================================= -->
+<footer id="footer" class="footer color-bg">
+
+    <div class="copyright-bar">
+        <div class="container">
+            <div class="col-xs-12 col-sm-6 no-padding social">
+                <ul class="link">
+                    <li class="fb pull-left"><a target="_blank" rel="nofollow" href="#" title="Facebook"></a></li>
+                    <li class="tw pull-left"><a target="_blank" rel="nofollow" href="#" title="Twitter"></a></li>
+                    <li class="googleplus pull-left"><a target="_blank" rel="nofollow" href="#"
+                                                        title="GooglePlus"></a></li>
+                    <li class="rss pull-left"><a target="_blank" rel="nofollow" href="#" title="RSS"></a></li>
+                    <li class="pintrest pull-left"><a target="_blank" rel="nofollow" href="#" title="PInterest"></a>
+                    </li>
+                    <li class="linkedin pull-left"><a target="_blank" rel="nofollow" href="#" title="Linkedin"></a>
+                    </li>
+                    <li class="youtube pull-left"><a target="_blank" rel="nofollow" href="#" title="Youtube"></a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-xs-12 col-sm-6 no-padding">
+
+                <!-- /.payment-methods -->
+            </div>
+        </div>
+    </div>
+</footer>
+<!-- ============================================================= FOOTER : END============================================================= -->
+
+<!-- For demo purposes – can be removed on production -->
+
+<!-- For demo purposes – can be removed on production : End -->
+
+<!-- JavaScripts placed at the end of the document so the pages load faster -->
+<script>
+
+</script>
+</body>
+</html>
